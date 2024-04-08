@@ -27,6 +27,7 @@ const Register = () => {
         username: `${user.firstname} ${user.lastname}`,
         nickname: user.nickname,
         email: user.email,
+        bio: user.bio,
         password: user.password,
         sex: user.sex,
         age: user.age,
@@ -71,6 +72,7 @@ const Register = () => {
             <input
               type="text"
               id="firstname"
+              autoFocus
               value={user.firstname}
               onChange={(e) =>
                 setUser((prev) => ({ ...prev, firstname: e.target.value }))
@@ -177,7 +179,6 @@ const Register = () => {
           </label>
           <input
             type="email"
-            autoFocus
             id="email"
             value={user.email}
             onChange={(e) =>
